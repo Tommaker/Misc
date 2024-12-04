@@ -1,0 +1,37 @@
+@startuml 链路状态更新流程
+skinparam BackgroundColor business
+skinparam NoteBackgroundColor lightblue
+skinparam NoteBackgroundColor greenyellow
+skinparam ParticipantBackgroundColor lime
+skinparam Handwritten false
+skinparam ArrowColor red
+skinparam dpi 200
+
+/'
+skinparam class{
+  BackgroundColor business
+  ArrowColor red
+  NoteBackgroundColor greenblue
+  ParticipantBackgroundColor red
+  BorderColor #d5d5d5
+}
+'skinparam StereotypeCBackgroundColor YellowGreen
+'/
+
+title 链路状态更新流程
+autonumber
+participant RM #yellow
+participant RRC
+
+== 收到路由通告SIB1 ==
+RRC->RM:RRC_RM_LINK_UPDATE_IND
+alt 路由通告中存在更新的序列号或更新的Metric
+RM->RRC:RM_RRC_SIB1_SEND_REQ
+RRC->RM:RRC_RM_SIB1_SEND_CFM
+else 节点退网
+RM->RRC:RM_RRC_REL_NODE_REQ
+RRC->RM:RRC_RM_REL_NODE_CFM
+end
+
+
+@enduml

@@ -1,0 +1,35 @@
+@startuml 单播数据转发流程
+skinparam BackgroundColor business
+skinparam NoteBackgroundColor lightblue
+skinparam NoteBackgroundColor greenyellow
+skinparam ParticipantBackgroundColor lime
+skinparam Handwritten false
+skinparam ArrowColor red
+skinparam dpi 160
+scale 13500 Width
+scale 2200 height
+
+/'
+skinparam class{
+  BackgroundColor business
+  ArrowColor red
+  NoteBackgroundColor greenblue
+  ParticipantBackgroundColor red
+  BorderColor #d5d5d5
+}
+'skinparam StereotypeCBackgroundColor YellowGreen
+'/
+
+title 单播数据转发流程
+autonumber
+
+participant RM #yellow
+participant PDCP
+
+
+PDCP->RM:PDCP_RM_DATA_IND
+note over RM:According Route table to forwarding packet
+RM->PDCP:RM_PDCP_DATA_IND
+
+
+@enduml

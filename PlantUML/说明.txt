@@ -1,0 +1,12 @@
+问题：
+1. 在VSCode中导出的png图片不清晰，有时候的字体还不统一的处理方法？
+原因：分辨率太低了
+设置：在@startuml和@enduml之间添加如下内容：
+skinparam dpi 200
+scale 13500 width
+scale 2200 height
+
+
+2. 如何在plantUML中添加注释
+所有以 单引号' 开头的语句，被认为是一个注释.
+多行注释，以 /' 和 '/ 作为注释的开始和结束

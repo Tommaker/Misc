@@ -1,0 +1,37 @@
+@startuml 用户数据上行/下行流程
+skinparam BackgroundColor business
+skinparam NoteBackgroundColor lightblue
+skinparam NoteBackgroundColor greenyellow
+skinparam ParticipantBackgroundColor lime
+skinparam Handwritten false
+skinparam ArrowColor red
+skinparam dpi 200
+
+/'
+skinparam class{
+  BackgroundColor business
+  ArrowColor red
+  NoteBackgroundColor greenblue
+  ParticipantBackgroundColor red
+  BorderColor #d5d5d5
+}
+'skinparam StereotypeCBackgroundColor YellowGreen
+'/
+
+title 用户数据上行/下行流程
+autonumber
+participant AP #red
+participant RM #yellow
+participant PDCP
+
+== Uplink data flow ==
+AP->RM:AP_RM_DATA_IND
+note over RM: Add packet header
+RM->PDCP:RM_PDCP_DATA_IND
+
+
+== Downlink data flow ==
+PDCP->RM:PDCP_RM_DATA_IND
+RM->AP:RM_AP_DATA_IND
+
+@enduml

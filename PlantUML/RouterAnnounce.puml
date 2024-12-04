@@ -1,0 +1,42 @@
+@startuml 收到了路由通告
+skinparam BackgroundColor business
+skinparam NoteBackgroundColor lightblue
+skinparam NoteBackgroundColor greenyellow
+skinparam ParticipantBackgroundColor lime
+skinparam Handwritten false
+skinparam ArrowColor red
+skinparam dpi 200
+
+/'
+skinparam class{
+  BackgroundColor business
+  ArrowColor red
+  NoteBackgroundColor greenblue
+  ParticipantBackgroundColor red
+  BorderColor #d5d5d5
+}
+'skinparam StereotypeCBackgroundColor YellowGreen
+'/
+
+title 收到路由通告的处理
+autonumber
+participant RM #yellow
+participant RRC
+
+== 收到路由通告SIB1 ==
+RRC->RM:RRC_RM_SIB1_IND
+
+alt 路由通告中存在更新的序列号或更新的Metric
+note over RM:存在路由项更新，触发新的路由通告
+RM->RRC:RM_RRC_SIB1_SEND_REQ
+
+RRC->RM:RRC_RM_SIB1_SEND_CFM
+else 节点退网
+note over RM:路由通告中释放了某个节点
+RM->RRC:RM_RRC_REL_NODE_REQ
+note over RRC:释放对应节点的无线资源
+RRC->RM:RRC_RM_REL_NODE_CFM
+end
+
+
+@enduml
