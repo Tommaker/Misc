@@ -1,0 +1,190 @@
+{
+    "security.allowedUNCHosts": [
+        "10.17.88.25",
+        "10.17.96.152"
+    ],
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 18,
+    "debug.javascript.defaultRuntimeExecutable": {
+        "pwa-node": "node"
+    },
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground":"#49b2b93d",
+        "editor.lineHighlightBorder":"#ffffff30",
+        "editor.selectionHighlightBorder":"#ff0000",
+    },
+
+    "editor.codeActionsOnSave": {},
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "E:\\VSCode\\.vimrc",
+    "vim.useSystemClipboard": true,
+    "vim.cursorStylePerMode.visualline": "line",
+    "vim.cursorStylePerMode.normal": "line",
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.autoindent": true,
+    "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
+    "editor.renderWhitespace": "all",
+    "editor.detectIndentation": false,
+    "editor.fontLigatures": false,
+    "editor.fontVariations": false,
+    "editor.fontWeight": "normal",
+    "search.exclude": {
+        "**/aplog": true,
+        "**/RTDlog": true,
+        "RFIDmessagelog.txt": true
+    },
+    "files.exclude": {
+        "**/RFIDmessagelog.txt": true
+    },
+    "workbench.editorAssociations": {
+        "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
+    },
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.options.statusBarVisibility": "visible",
+    "workbench.settings.applyToAllProfiles": [],
+    "fileheader.customMade": {
+        "copyright": "Copyright (C), 2024, ESWIN COMPUTING, Ltd",
+        "Author": "liuyongqi - liuyongqi@eswincomputing.com",
+        "Date": "",
+        "LastEditors": "liuyongqi",
+        "LastEditTime": "",
+        "Description": "请填写文件简介"
+    },
+    "fileheader.cursorMode": {
+        // 函数注释
+        "Description": "请填写函数简介",
+        "param": "",// 传输参数解释
+        "return": "",// 返回值解释
+    },
+    "fileheader.configObj": {
+
+
+        "createFileTime": true,
+        "language": {
+            "languagetest": {
+                "head": "/$$",
+                "middle": " $ @",
+                "end": " $/",
+                "functionSymbol": {
+                    "head": "/** ",
+                    "middle": " * @",
+                    "end": " */"
+                },
+                "functionParams": "js"
+            }
+        },
+        "autoAdd": true,
+        "autoAddLine": 100,
+        "autoAlready": true,
+        "annotationStr": {
+            "head": "/*",
+            "middle": " * @",
+            "end": " */",
+            "use": false
+        },
+        "headInsertLine": {
+            "php": 2,
+            "sh": 2
+        },
+        "beforeAnnotation": {
+            "文件后缀": "该文件后缀的头部注释之前添加某些内容"
+        },
+        "afterAnnotation": {
+            "文件后缀": "该文件后缀的头部注释之后添加某些内容"
+        },
+        "specialOptions": {
+            "特殊字段": "自定义比如LastEditTime/LastEditors"
+        },
+        "switch": {
+            "newlineAddAnnotation": true
+        },
+        "supportAutoLanguage": [],
+        "prohibitAutoAdd": [
+            "json"
+        ],
+        "folderBlacklist": [
+            "node_modules",
+            "文件夹禁止自动添加头部注释"
+        ],
+        "prohibitItemAutoAdd": [
+            "项目的全称, 整个项目禁止自动添加头部注释, 可以使用快捷键添加"
+        ],
+        "moveCursor": true,
+        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+        "atSymbol": [
+            "@",
+            "@"
+        ],
+        "atSymbolObj": {
+            "文件后缀": [
+                "头部注释@符号",
+                "函数注释@符号"
+            ]
+        },
+        "colon": [
+            ": ",
+            ": "
+        ],
+        "colonObj": {
+            "文件后缀": [
+                "头部注释冒号",
+                "函数注释冒号"
+            ]
+        },
+        "filePathColon": "路径分隔符替换",
+        "showErrorMessage": false,
+        "writeLog": false,
+        "wideSame": false,
+        "wideNum": 13,
+        "functionWideNum": 0,
+        "CheckFileChange": false,
+        "createHeader": false,
+        "useWorker": false,
+        "designAddHead": false,
+        "headDesignName": "random",
+        "headDesign": false,
+        "cursorModeInternalAll": {},
+        "openFunctionParamsCheck": true,
+        "functionParamsShape": [
+            "{",
+            "}"
+        ],
+        "functionBlankSpaceAll": {},
+        "functionTypeSymbol": "*",
+        "typeParamOrder": "type param",
+        "customHasHeadEnd": {},
+        "throttleTime": 60000,
+        "functionParamAddStr": "",
+        "NoMatchParams": "no show param"
+    },
+    "vim.commandLineModeKeyBindings": [
+
+    ],
+    "terminal.integrated.env.windows": {
+        "NODE_OPTIONS": "--max-old-space-size=4096"
+    },
+    "todohighlight.isEnable": true,
+    "todohighlight.defaultStyle": {},
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss"
+    ],
+    "editor.tabCompletion": "on",
+    "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+    "C_Cpp.vcFormat.indent.caseLabels": true,
+    "github.copilot.advanced": {
+        "authProvider": "github"
+    },
+    "remote.SSH.remotePlatform": {
+        "192.168.159.128": "linux"
+    }
+}
