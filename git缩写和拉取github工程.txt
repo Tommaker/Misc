@@ -3,6 +3,7 @@ git clone https://[ghp_personNewAccessNoteksReplaceThis]@github.com/Tommaker/Kis
 
 在home目录下的.gitconfig中添加如下内容：
 [alias]
+    pl = pull --rebase
     st = status
     co = checkout
     br = branch
